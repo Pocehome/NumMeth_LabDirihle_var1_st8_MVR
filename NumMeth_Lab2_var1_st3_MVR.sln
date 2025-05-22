@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumMeth_Lab2_var1_st3_MVR", "NumMeth_Lab2_var1_st3_MVR.csproj", "{876D6A25-B6C5-452B-9126-41153DC7D3FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{876D6A25-B6C5-452B-9126-41153DC7D3FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{876D6A25-B6C5-452B-9126-41153DC7D3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{876D6A25-B6C5-452B-9126-41153DC7D3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{876D6A25-B6C5-452B-9126-41153DC7D3FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFAFBB33-2694-42D8-9872-16D2B0260456}
+	EndGlobalSection
+EndGlobal
