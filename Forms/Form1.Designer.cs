@@ -33,6 +33,7 @@
             this.тестоваяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -61,7 +62,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.calkButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -72,6 +73,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.пример05e6ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -94,14 +96,15 @@
             this.постановкаЗадачToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1513, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1158, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // постановкаЗадачToolStripMenuItem
             // 
             this.постановкаЗадачToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.тестоваяToolStripMenuItem});
+            this.тестоваяToolStripMenuItem,
+            this.пример05e6ToolStripMenuItem});
             this.постановкаЗадачToolStripMenuItem.Name = "постановкаЗадачToolStripMenuItem";
             this.постановкаЗадачToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
             this.постановкаЗадачToolStripMenuItem.Text = "Постановка задач";
@@ -109,7 +112,7 @@
             // тестоваяToolStripMenuItem
             // 
             this.тестоваяToolStripMenuItem.Name = "тестоваяToolStripMenuItem";
-            this.тестоваяToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
+            this.тестоваяToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.тестоваяToolStripMenuItem.Text = "Тестовая";
             this.тестоваяToolStripMenuItem.Click += new System.EventHandler(this.тестоваяToolStripMenuItem_Click);
             // 
@@ -119,30 +122,42 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 31);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1513, 722);
+            this.tabControl1.Size = new System.Drawing.Size(1145, 910);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.calkButton);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1505, 693);
+            this.tabPage1.Size = new System.Drawing.Size(1137, 881);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Тестовая";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(7, 191);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(289, 28);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Заполнить таблицу";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tabControl2);
-            this.groupBox2.Location = new System.Drawing.Point(8, 226);
+            this.groupBox2.Location = new System.Drawing.Point(8, 280);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1112, 467);
+            this.groupBox2.Size = new System.Drawing.Size(1112, 594);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Таблицы";
@@ -155,7 +170,7 @@
             this.tabControl2.Location = new System.Drawing.Point(0, 21);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1106, 437);
+            this.tabControl2.Size = new System.Drawing.Size(1106, 564);
             this.tabControl2.TabIndex = 0;
             // 
             // tabPage3
@@ -164,7 +179,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1098, 408);
+            this.tabPage3.Size = new System.Drawing.Size(1098, 535);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "U(x, y)";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -176,7 +191,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1085, 396);
+            this.dataGridView1.Size = new System.Drawing.Size(1085, 518);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage4
@@ -185,7 +200,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1098, 408);
+            this.tabPage4.Size = new System.Drawing.Size(1098, 535);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "V(x, y)";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -206,7 +221,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1098, 408);
+            this.tabPage5.Size = new System.Drawing.Size(1098, 535);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "|U(x, y) - V(x, y)|";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -245,7 +260,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(816, 212);
+            this.groupBox4.Size = new System.Drawing.Size(816, 247);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Справка";
@@ -423,7 +438,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(7, 191);
+            this.button3.Location = new System.Drawing.Point(7, 227);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(289, 28);
@@ -432,16 +447,16 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button1
+            // calkButton
             // 
-            this.button1.Location = new System.Drawing.Point(7, 155);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(289, 28);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Выполнить расчёт";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.calkButton.Location = new System.Drawing.Point(7, 155);
+            this.calkButton.Margin = new System.Windows.Forms.Padding(4);
+            this.calkButton.Name = "calkButton";
+            this.calkButton.Size = new System.Drawing.Size(289, 28);
+            this.calkButton.TabIndex = 6;
+            this.calkButton.Text = "Выполнить расчёт";
+            this.calkButton.UseVisualStyleBackColor = true;
+            this.calkButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -549,11 +564,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Размеры сетки";
             // 
+            // пример05e6ToolStripMenuItem
+            // 
+            this.пример05e6ToolStripMenuItem.Name = "пример05e6ToolStripMenuItem";
+            this.пример05e6ToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.пример05e6ToolStripMenuItem.Text = "Пример с ошибкой 0.5e-6";
+            this.пример05e6ToolStripMenuItem.Click += new System.EventHandler(this.пример05e6ToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1513, 752);
+            this.ClientSize = new System.Drawing.Size(1158, 942);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -588,7 +610,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button calkButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
@@ -626,6 +648,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolStripMenuItem пример05e6ToolStripMenuItem;
     }
 }
 

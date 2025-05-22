@@ -19,26 +19,18 @@ namespace NumMeth_Lab2_var1_st3_MVR
 
         // Инициализация парамаетров
         int n, m, N_max, iter_count;
-        double Eps, h, k, h2, k2, A, w_opt, MaxF, xMax, yMax, MaxDiff_UV, Eps_max, maxR;
+        double Eps, h, k, h2, k2, A, w_opt, MaxF, xMax, yMax, MaxDiff_UV, Eps_max, MaxR;
 
         public Form1()
         {
             InitializeComponent();
         }
 
-
         // Функции
         double u1(double x, double y) // Решение u*(x,y) для тестовой задачи
         {
             return Math.Exp(Math.Pow(Math.Sin(Math.PI * x * y), 2));
         }
-
-        //double f1(double x, double y) // Правая часть уравнения Пуассона f*(x,y), функция полученная через Лапласса
-        //{
-        //    double piXY = Math.PI * x * y;
-        //    return -Math.Pow(Math.PI, 2) * Math.Exp(Math.Pow(Math.Sin(piXY), 2)) * (x * x + y * y) *
-        //        (Math.Sin(2 * piXY) + 2 * Math.Cos(piXY));
-        //}
 
         double f1(double x, double y)
         {
@@ -67,9 +59,9 @@ namespace NumMeth_Lab2_var1_st3_MVR
 
         bool CheckGridParameters()  // Проверка кратности n и m 4
         {
-            if (n % 4 != 0 || m % 4 != 0)
+            if (n % 4 != 0 || m % 4 != 0 || n < 1 || m < 1)
             {
-                MessageBox.Show("Ошибка: n и m должны быть кратны 4", "Некорректные параметры сетки");
+                MessageBox.Show("Ошибка: n и m должны быть больше 0 и кратны 4", "Некорректные параметры сетки");
                 return false;
             }
             return true;
@@ -168,29 +160,57 @@ namespace NumMeth_Lab2_var1_st3_MVR
                 iter_count++;
 
             } while (Eps_max > Eps && iter_count < N_max);
-
-            calkMaxR();
         }
 
-        void calkMaxR()  // Вычисление максимальной невязки
+        void calk_MaxR_MaxDiffUV()  // Вычисление максимальной невязки и максимальной разности U и V
         {
-            maxR = 0.0;
+            MaxR = 0.0;
+
+            xMax = 0.0;
+            yMax = 0.0;
+            MaxDiff_UV = 0.0;
+
             for (int j = 0; j <= m; j++)
             {
                 for (int i = 0; i <= n; i++)
                 {
                     if (domainMatrix[i][j] == 1)
-                    {
+                    {   
+                        // Невязка
                         double residual = Math.Abs(
                             (2.0 / (h * h) + 2.0 / (k * k)) * v[i][j] -
                             (v[i - 1][j] + v[i + 1][j]) / (h * h) -
                             (v[i][j - 1] + v[i][j + 1]) / (k * k) -
                             f[i][j]);
 
-                        if (residual > maxR) maxR = residual;
+                        if (residual > MaxR) MaxR = residual;
+
+                        // Разность U и V
+                        double error = Math.Abs(u[i][j] - v[i][j]);
+
+                        if (error > MaxDiff_UV)
+                        {
+                            MaxDiff_UV = error;
+                            xMax = x[i];
+                            yMax = y[j];
+                        }
                     }
                 }
             }
+        }
+
+        void fillReference()  // Заполнение справки
+        {
+            textBox5.Text = Convert.ToString(w_opt);
+            textBox9.Text = Convert.ToString(iter_count);
+            textBox10.Text = Convert.ToString(Eps_max);
+            textBox11.Text = Convert.ToString(MaxDiff_UV);
+            textBox15.Text = Convert.ToString(MaxF);
+            textBox16.Text = Convert.ToString(MaxR);
+            textBox12.Text = Convert.ToString(xMax);
+            textBox13.Text = Convert.ToString(yMax);
+
+            textBox14.Text = "Нулевое начальноe приближение";
         }
 
         // Очистка и настройка таблиц
@@ -203,7 +223,7 @@ namespace NumMeth_Lab2_var1_st3_MVR
             // Добавляем служебные столбцы
             dataGridView1.Columns.Add("empty1", "");
             dataGridView1.Columns.Add("empty2", "");
-            dataGridView1.Columns[0].Width = 30;
+            dataGridView1.Columns[0].Width = 50;
             dataGridView1.Columns[1].Width = 50;
 
             // Добавляем столбцы для y значений
@@ -309,13 +329,6 @@ namespace NumMeth_Lab2_var1_st3_MVR
                 {
                     double error = Math.Abs(u[i][j] - v[i][j]);
                     dataGridView3.Rows[rowIdx].Cells[j + 2].Value = error.ToString("0.####");
-
-                    if (error > MaxDiff_UV)
-                    {
-                        MaxDiff_UV = error;
-                        xMax = x[i];
-                        yMax = y[j];
-                    }
                 }
             }
         }
@@ -327,6 +340,12 @@ namespace NumMeth_Lab2_var1_st3_MVR
             form3.Show();
         }
 
+        private void пример05e6ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             // Чтение данных из полей
@@ -335,9 +354,8 @@ namespace NumMeth_Lab2_var1_st3_MVR
             N_max = Convert.ToInt32(textBox3.Text);
             Eps = Convert.ToDouble(textBox4.Text);
 
-            if (!CheckGridParameters()){
-                return;
-            }
+            // Проверка n и m
+            if (!CheckGridParameters()) return;
 
             // Расчёт оптимального параметра w
             w_opt = optimal_W(n, m);
@@ -353,20 +371,12 @@ namespace NumMeth_Lab2_var1_st3_MVR
             k2 = -1 / (k * k);
             A = -2 * (h2 + k2);
 
-            // Максимальные значения
-            MaxF = 0.0;
-            xMax = 0.0;
-            yMax = 0.0;
-            MaxDiff_UV = 0.0;
-            Eps_max = 0.0;
-            maxR = 0.0;
-
+            // Инициализация массивов
             u = new double[n + 1][];
             v = new double[n + 1][];
             f = new double[n + 1][];
             x = new double[n + 1];
             y = new double[m + 1];
-
             for (int i = 0; i <= n; i++)
             {
                 u[i] = new double[m + 1];
@@ -374,17 +384,21 @@ namespace NumMeth_Lab2_var1_st3_MVR
                 f[i] = new double[m + 1];
             }
 
-            for (int i = 0; i <= n; i++)  //Заполнение массива x
+            // Заполнение массива x
+            for (int i = 0; i <= n; i++)
             {
                 x[i] = a + i * h;
             }
 
-            for (int j = 0; j <= m; j++)  //Заполнение массива y
+            // Заполнение массива y
+            for (int j = 0; j <= m; j++)
             {
                 y[j] = c + j * k;
             }
 
-            for (int j = 0; j <= m; j++)  //Заполнение массивов f и u
+            // Заполнение массивов f и u
+            MaxF = 0.0;
+            for (int j = 0; j <= m; j++)
             {
                 for (int i = 0; i <= n; i++)
                 {
@@ -405,30 +419,37 @@ namespace NumMeth_Lab2_var1_st3_MVR
                 }
             }
 
+            // Решение методом верхней релаксации
             SolvePoissonSOR();
+
+            // Справка
+            calk_MaxR_MaxDiffUV();
+            fillReference();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (u == null)
+            {
+                MessageBox.Show("Ошибка: Сначала произведите вычисления", "Отсутствуют данные");
+                return;
+            }
 
             // Таблица
             SetupDataGridViews();
             SetupDataGridView2();
             SetupDataGridView3();
-
-            //calkMaxR();
-
-            // Справка
-            textBox5.Text = Convert.ToString(w_opt);
-            textBox9.Text = Convert.ToString(iter_count);
-            textBox10.Text = Convert.ToString(Eps_max);
-            textBox11.Text = Convert.ToString(MaxDiff_UV);
-            textBox15.Text = Convert.ToString(MaxF);
-            textBox16.Text = Convert.ToString(maxR);
-            textBox12.Text = Convert.ToString(xMax);
-            textBox13.Text = Convert.ToString(yMax);
-
-            textBox14.Text = "Нулевое начальноe приближение";
         }
-
+        
         private void button3_Click(object sender, EventArgs e)
         {
+            if (u == null)
+            {
+                MessageBox.Show("Ошибка: Сначала произведите вычисления", "Отсутствуют данные");
+                return;
+            }
+            
+            // 3D графики
             int n = Convert.ToInt32(textBox1.Text);
             int m = Convert.ToInt32(textBox2.Text);
             Form4 form4 = new Form4(u, v, n, m, false);
