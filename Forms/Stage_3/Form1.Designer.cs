@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.постановкаЗадачToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.тестоваяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пример05e6ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
@@ -73,7 +74,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.пример05e6ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -112,9 +112,16 @@
             // тестоваяToolStripMenuItem
             // 
             this.тестоваяToolStripMenuItem.Name = "тестоваяToolStripMenuItem";
-            this.тестоваяToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.тестоваяToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
             this.тестоваяToolStripMenuItem.Text = "Тестовая";
             this.тестоваяToolStripMenuItem.Click += new System.EventHandler(this.тестоваяToolStripMenuItem_Click);
+            // 
+            // пример05e6ToolStripMenuItem
+            // 
+            this.пример05e6ToolStripMenuItem.Name = "пример05e6ToolStripMenuItem";
+            this.пример05e6ToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.пример05e6ToolStripMenuItem.Text = "Пример с ошибкой 0.5e-6";
+            this.пример05e6ToolStripMenuItem.Click += new System.EventHandler(this.пример05e6ToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -564,13 +571,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Размеры сетки";
             // 
-            // пример05e6ToolStripMenuItem
-            // 
-            this.пример05e6ToolStripMenuItem.Name = "пример05e6ToolStripMenuItem";
-            this.пример05e6ToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
-            this.пример05e6ToolStripMenuItem.Text = "Пример с ошибкой 0.5e-6";
-            this.пример05e6ToolStripMenuItem.Click += new System.EventHandler(this.пример05e6ToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -580,7 +580,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Метод верхней релаксации. Хамков Матвей. Группа 2. Команда 2. Вариант 1";
+            this.Text = "Метод верхней релаксации. Хамков Матвей. Группа 2. Команда 1. Вариант 1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

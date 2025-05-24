@@ -47,34 +47,64 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="3D\ColorSchema.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\Form6.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
+    <Compile Include="Forms\Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stage_1\Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stage_1\Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stage_1\Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stage_1\Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stage_1\Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stage_1\Form9.Designer.cs">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stage_1\FormProgress1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stage_1\FormProgress1.Designer.cs">
+      <DependentUpon>FormProgress1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stage_3\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stage_3\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form2.cs">
+    <Compile Include="Forms\Stage_3\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form2.Designer.cs">
+    <Compile Include="Forms\Stage_3\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form3.cs">
+    <Compile Include="Forms\Stage_3\Form3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form3.Designer.cs">
+    <Compile Include="Forms\Stage_3\Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form4.cs">
+    <Compile Include="Forms\Stage_3\Form4.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form4.Designer.cs">
+    <Compile Include="Forms\Stage_3\Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form5.cs">
+    <Compile Include="Forms\Stage_3\Form5.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form5.Designer.cs">
+    <Compile Include="Forms\Stage_3\Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
     <Compile Include="3D\FunctionCompiler.cs" />
@@ -83,35 +113,47 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Form1.resx">
+    <EmbeddedResource Include="Forms\Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stage_1\Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stage_1\Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stage_1\Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stage_3\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form2.resx">
+    <EmbeddedResource Include="Forms\Stage_3\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form3.resx">
+    <EmbeddedResource Include="Forms\Stage_3\Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form4.resx">
+    <EmbeddedResource Include="Forms\Stage_3\Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form5.resx">
+    <EmbeddedResource Include="Forms\Stage_3\Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -122,10 +164,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="test_opr.jpg" />
-    <None Include="5e-7.jpg" />
-    <Content Include="Images\5e-7.jpg" />
-    <Content Include="Images\test_opr.jpg" />
+    <Content Include="Images\Stage_3\5e-7.jpg" />
+    <Content Include="Images\Stage_3\test_opr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\Stage_2_Kir\" />
+    <Folder Include="Forms\Stage_2_Sl\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
