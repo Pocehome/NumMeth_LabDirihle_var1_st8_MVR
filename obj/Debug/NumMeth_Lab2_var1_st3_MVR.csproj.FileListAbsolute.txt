@@ -31,3 +31,6 @@ C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1
 C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form12.resources
 C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form13.resources
 C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form14.resources
+C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form15.resources
+C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form18.resources
+C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form19.resources

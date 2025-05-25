@@ -23,6 +23,12 @@ namespace NumMeth_Lab2_var1_st3_MVR
             st1_Maksimovich.Show();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form15 st2_Ivanov = new Form15();
+            st2_Ivanov.Show();
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             Form10 st2_Zacepin = new Form10();

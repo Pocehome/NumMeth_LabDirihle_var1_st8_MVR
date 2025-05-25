@@ -77,6 +77,36 @@
     <Compile Include="Forms\Stage_1\FormProgress1.Designer.cs">
       <DependentUpon>FormProgress1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Stage_2_Kir\Form15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stage_2_Kir\Form15.Designer.cs">
+      <DependentUpon>Form15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stage_2_Kir\Form16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stage_2_Kir\Form16.Designer.cs">
+      <DependentUpon>Form16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stage_2_Kir\Form17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stage_2_Kir\Form17.Designer.cs">
+      <DependentUpon>Form17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stage_2_Kir\Form18.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stage_2_Kir\Form18.Designer.cs">
+      <DependentUpon>Form18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stage_2_Kir\Form19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stage_2_Kir\Form19.Designer.cs">
+      <DependentUpon>Form19.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Stage_2_Sl\Form10.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +185,15 @@
     <EmbeddedResource Include="Forms\Stage_1\Form9.resx">
       <DependentUpon>Form9.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stage_2_Kir\Form15.resx">
+      <DependentUpon>Form15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stage_2_Kir\Form18.resx">
+      <DependentUpon>Form18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stage_2_Kir\Form19.resx">
+      <DependentUpon>Form19.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Stage_2_Sl\Form10.resx">
       <DependentUpon>Form10.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,8 +253,6 @@
     <Content Include="Images\Stage_3\5e-7.jpg" />
     <Content Include="Images\Stage_3\test_opr.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\Stage_2_Kir\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
