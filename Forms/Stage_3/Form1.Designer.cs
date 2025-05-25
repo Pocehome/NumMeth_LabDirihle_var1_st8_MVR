@@ -274,17 +274,17 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(414, 52);
+            this.textBox5.Location = new System.Drawing.Point(484, 52);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(168, 22);
+            this.textBox5.Size = new System.Drawing.Size(98, 22);
             this.textBox5.TabIndex = 19;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(380, 55);
+            this.label6.Location = new System.Drawing.Point(450, 58);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 16);
@@ -347,7 +347,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(181, 52);
+            this.textBox10.Location = new System.Drawing.Point(242, 52);
             this.textBox10.Margin = new System.Windows.Forms.Padding(4);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
@@ -429,9 +429,9 @@
             this.label12.Location = new System.Drawing.Point(8, 55);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(165, 16);
+            this.label12.Size = new System.Drawing.Size(235, 16);
             this.label12.TabIndex = 1;
-            this.label12.Text = "Погрешность решения = ";
+            this.label12.Text = "Достигнутое значение точности = ";
             // 
             // label11
             // 

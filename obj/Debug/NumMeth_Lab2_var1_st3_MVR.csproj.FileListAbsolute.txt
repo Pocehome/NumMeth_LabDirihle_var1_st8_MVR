@@ -21,3 +21,13 @@ C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1
 C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form2.resources
 C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form4.resources
 C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form5.resources
+C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form6.resources
+C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form7.resources
+C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form8.resources
+C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form9.resources
+C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.exe.config
+C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form10.resources
+C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form11.resources
+C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form12.resources
+C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form13.resources
+C:\My own\Learning\Лобач\Числаки\КСР-весна\NumMeth_Lab2_var1_st3_MVR\obj\Debug\NumMeth_Lab2_var1_st3_MVR.Form14.resources
