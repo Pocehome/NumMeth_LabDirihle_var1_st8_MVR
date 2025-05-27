@@ -22,7 +22,7 @@ namespace NumMeth_Lab2_var1_st3_MVR
         double[,] ARR;
         int N;
         int M;
-        public Form4(double[][] u, double[][] v1, int n, int m, bool r)
+        public Form4(double[][] u, double[][] v1, int n, int m)
         {
             InitializeComponent();
 
