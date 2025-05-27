@@ -34,7 +34,7 @@
             this.пример05e6ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_fill_table = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -62,7 +62,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button2D = new System.Windows.Forms.Button();
             this.calkButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -74,6 +74,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button3D = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -134,10 +135,11 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.button3D);
+            this.tabPage1.Controls.Add(this.button_fill_table);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox4);
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.button2D);
             this.tabPage1.Controls.Add(this.calkButton);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -148,16 +150,16 @@
             this.tabPage1.Text = "Тестовая";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // button_fill_table
             // 
-            this.button2.Location = new System.Drawing.Point(7, 191);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(289, 28);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Заполнить таблицу";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_fill_table.Location = new System.Drawing.Point(7, 191);
+            this.button_fill_table.Margin = new System.Windows.Forms.Padding(4);
+            this.button_fill_table.Name = "button_fill_table";
+            this.button_fill_table.Size = new System.Drawing.Size(289, 28);
+            this.button_fill_table.TabIndex = 10;
+            this.button_fill_table.Text = "Заполнить таблицу";
+            this.button_fill_table.UseVisualStyleBackColor = true;
+            this.button_fill_table.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox2
             // 
@@ -443,16 +445,16 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Количество итераций = ";
             // 
-            // button3
+            // button2D
             // 
-            this.button3.Location = new System.Drawing.Point(7, 227);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(289, 28);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Построить графики";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button2D.Location = new System.Drawing.Point(7, 227);
+            this.button2D.Margin = new System.Windows.Forms.Padding(4);
+            this.button2D.Name = "button2D";
+            this.button2D.Size = new System.Drawing.Size(138, 28);
+            this.button2D.TabIndex = 7;
+            this.button2D.Text = "2D";
+            this.button2D.UseVisualStyleBackColor = true;
+            this.button2D.Click += new System.EventHandler(this.button3_Click);
             // 
             // calkButton
             // 
@@ -571,6 +573,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Размеры сетки";
             // 
+            // button3D
+            // 
+            this.button3D.Location = new System.Drawing.Point(158, 227);
+            this.button3D.Margin = new System.Windows.Forms.Padding(4);
+            this.button3D.Name = "button3D";
+            this.button3D.Size = new System.Drawing.Size(138, 28);
+            this.button3D.TabIndex = 11;
+            this.button3D.Text = "3D";
+            this.button3D.UseVisualStyleBackColor = true;
+            this.button3D.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -609,7 +622,7 @@
         private System.Windows.Forms.ToolStripMenuItem тестоваяToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2D;
         private System.Windows.Forms.Button calkButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox4;
@@ -648,8 +661,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_fill_table;
         private System.Windows.Forms.ToolStripMenuItem пример05e6ToolStripMenuItem;
+        private System.Windows.Forms.Button button3D;
     }
 }
 

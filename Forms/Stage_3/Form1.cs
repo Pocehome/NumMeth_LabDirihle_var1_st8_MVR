@@ -93,12 +93,12 @@ namespace NumMeth_Lab2_var1_st3_MVR
 
                     // Проверка на граничные узлы (2)
                     else if (i == 0 || i == n || j == 0 || j == m ||
-                        (i == zeroNodesX && j < zeroNodesY) ||
-                        (i < zeroNodesX && j == zeroNodesY) ||
-                        (i == zeroNodesX && j > m - zeroNodesY) ||
-                        (i > n - zeroNodesX && j == zeroNodesY) ||
-                        (i == n - zeroNodesX && j < zeroNodesY) ||
-                        (i < zeroNodesX && j == m - zeroNodesY)
+                        (i == zeroNodesX && j <= zeroNodesY) ||
+                        (i <= zeroNodesX && j == zeroNodesY) ||
+                        (i == zeroNodesX && j >= m - zeroNodesY) ||
+                        (i >= n - zeroNodesX && j == zeroNodesY) ||
+                        (i == n - zeroNodesX && j <= zeroNodesY) ||
+                        (i <= zeroNodesX && j == m - zeroNodesY)
                         )
                     {
                         domainMatrix[i][j] = 2;
@@ -451,7 +451,22 @@ namespace NumMeth_Lab2_var1_st3_MVR
                 MessageBox.Show("Ошибка: Сначала произведите вычисления", "Отсутствуют данные");
                 return;
             }
-            
+
+            // 2D графики
+            int n = Convert.ToInt32(textBox1.Text);
+            int m = Convert.ToInt32(textBox2.Text);
+            Form20 form20 = new Form20(u, v, n, m);
+            form20.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (u == null)
+            {
+                MessageBox.Show("Ошибка: Сначала произведите вычисления", "Отсутствуют данные");
+                return;
+            }
+
             // 3D графики
             int n = Convert.ToInt32(textBox1.Text);
             int m = Convert.ToInt32(textBox2.Text);
