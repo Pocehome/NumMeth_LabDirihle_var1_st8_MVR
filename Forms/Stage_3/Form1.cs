@@ -84,19 +84,22 @@ namespace NumMeth_Lab2_var1_st3_MVR
                 for (int j = 0; j <= m; j++)
                 {
                     // Проверка на исключённые узлы (0)
-                    if (i < zeroNodesX && j < zeroNodesY
-                        || i > n - zeroNodesX && j < zeroNodesY
-                        || i > n - zeroNodesX && j > m - zeroNodesY)
+                    if (i < zeroNodesX && j > m - zeroNodesY
+                        || i < zeroNodesX && j < zeroNodesY
+                        || i > n - zeroNodesX && j < zeroNodesY)
                     {
                         domainMatrix[i][j] = 0;
                     }
 
                     // Проверка на граничные узлы (2)
                     else if (i == 0 || i == n || j == 0 || j == m ||
-                          i == zeroNodesX && j < zeroNodesY ||
-                          j == m - zeroNodesY && i > n - zeroNodesX ||
-                          j == zeroNodesY && (i < zeroNodesX || i > n - zeroNodesX) ||
-                          i == n - zeroNodesX && (j < zeroNodesY || j > m - zeroNodesY))
+                        (i == zeroNodesX && j < zeroNodesY) ||
+                        (i < zeroNodesX && j == zeroNodesY) ||
+                        (i == zeroNodesX && j > m - zeroNodesY) ||
+                        (i > n - zeroNodesX && j == zeroNodesY) ||
+                        (i == n - zeroNodesX && j < zeroNodesY) ||
+                        (i < zeroNodesX && j == m - zeroNodesY)
+                        )
                     {
                         domainMatrix[i][j] = 2;
                     }
@@ -226,32 +229,32 @@ namespace NumMeth_Lab2_var1_st3_MVR
             dataGridView1.Columns[0].Width = 50;
             dataGridView1.Columns[1].Width = 50;
 
-            // Добавляем столбцы для y значений
-            for (int j = 0; j <= m; j++)
+            // Добавляем столбцы для x значений
+            for (int i = 0; i <= n; i++)
             {
-                dataGridView1.Columns.Add($"y{j}", $"y{j}");
-                dataGridView1.Columns[j + 2].Width = 60;
+                dataGridView1.Columns.Add($"x{i}", $"x{i}");
+                dataGridView1.Columns[i + 2].Width = 60;
             }
 
-            // Добавляем заголовочную строку с y[j] значениями
+            // Добавляем заголовочную строку с x[i] значениями
             dataGridView1.Rows.Add();
             dataGridView1.Rows[0].Cells[0].Value = "";
             dataGridView1.Rows[0].Cells[1].Value = "";
-            for (int j = 0; j <= m; j++)
+            for (int i = 0; i <= n; i++)
             {
-                dataGridView1.Rows[0].Cells[j + 2].Value = $"{y[j]:F3}";
+                dataGridView1.Rows[0].Cells[i + 2].Value = $"{x[i]:F3}";
             }
 
             // Добавляем строки с данными
-            for (int i = 0; i <= n; i++)
+            for (int j = 0; j <= m; j++)
             {
                 int rowIdx = dataGridView1.Rows.Add();
-                dataGridView1.Rows[rowIdx].Cells[0].Value = $"x{i}";
-                dataGridView1.Rows[rowIdx].Cells[1].Value = $"{x[i]:0.####}";
+                dataGridView1.Rows[rowIdx].Cells[0].Value = $"y{j}";
+                dataGridView1.Rows[rowIdx].Cells[1].Value = $"{y[j]:0.####}";
 
-                for (int j = 0; j <= m; j++)
+                for (int i = 0; i <= n; i++)
                 {
-                    dataGridView1.Rows[rowIdx].Cells[j + 2].Value = u[i][j].ToString("0.####");
+                    dataGridView1.Rows[rowIdx].Cells[i + 2].Value = u[i][j].ToString("0.####");
                 }
             }
         }
@@ -263,33 +266,33 @@ namespace NumMeth_Lab2_var1_st3_MVR
 
             dataGridView2.Columns.Add("empty1", "");
             dataGridView2.Columns.Add("empty2", "");
-            dataGridView2.Columns[0].Width = 30;
+            dataGridView2.Columns[0].Width = 50;
             dataGridView2.Columns[1].Width = 50;
 
-            for (int j = 0; j <= m; j++)
+            for (int i = 0; i <= n; i++)
             {
-                dataGridView2.Columns.Add($"y{j}", $"y{j}");
-                dataGridView2.Columns[j + 2].Width = 60;
+                dataGridView2.Columns.Add($"x{i}", $"x{i}");
+                dataGridView2.Columns[i + 2].Width = 60;
             }
 
             dataGridView2.Rows.Add();
             dataGridView2.Rows[0].Cells[0].Value = "";
             dataGridView2.Rows[0].Cells[1].Value = "";
 
-            for (int j = 0; j <= m; j++)
-            {
-                dataGridView2.Rows[0].Cells[j + 2].Value = $"{y[j]:0.####}";
-            }
-
             for (int i = 0; i <= n; i++)
             {
-                int rowIdx = dataGridView2.Rows.Add();
-                dataGridView2.Rows[rowIdx].Cells[0].Value = $"x{i}";
-                dataGridView2.Rows[rowIdx].Cells[1].Value = $"{x[i]:0.####}";
+                dataGridView2.Rows[0].Cells[i + 2].Value = $"{x[i]:0.####}";
+            }
 
-                for (int j = 0; j <= m; j++)
+            for (int j = 0; j <= m; j++)
+            {
+                int rowIdx = dataGridView2.Rows.Add();
+                dataGridView2.Rows[rowIdx].Cells[0].Value = $"y{j}";
+                dataGridView2.Rows[rowIdx].Cells[1].Value = $"{y[j]:0.####}";
+
+                for (int i = 0; i <= n; i++)
                 {
-                    dataGridView2.Rows[rowIdx].Cells[j + 2].Value = v[i][j].ToString("0.####");
+                    dataGridView2.Rows[rowIdx].Cells[i + 2].Value = v[i][j].ToString("0.####");
                 }
             }
         }
@@ -301,34 +304,34 @@ namespace NumMeth_Lab2_var1_st3_MVR
 
             dataGridView3.Columns.Add("empty1", "");
             dataGridView3.Columns.Add("empty2", "");
-            dataGridView3.Columns[0].Width = 30;
+            dataGridView3.Columns[0].Width = 50;
             dataGridView3.Columns[1].Width = 50;
 
-            for (int j = 0; j <= m; j++)
+            for (int i = 0; i <= n; i++)
             {
-                dataGridView3.Columns.Add($"y{j}", $"y{j}");
-                dataGridView3.Columns[j + 2].Width = 60;
+                dataGridView3.Columns.Add($"x{i}", $"x{i}");
+                dataGridView3.Columns[i + 2].Width = 60;
             }
 
             dataGridView3.Rows.Add();
             dataGridView3.Rows[0].Cells[0].Value = "";
             dataGridView3.Rows[0].Cells[1].Value = "";
 
-            for (int j = 0; j <= m; j++)
-            {
-                dataGridView3.Rows[0].Cells[j + 2].Value = $"{y[j]:0.####}";
-            }
-
             for (int i = 0; i <= n; i++)
             {
-                int rowIdx = dataGridView3.Rows.Add();
-                dataGridView3.Rows[rowIdx].Cells[0].Value = $"x{i}";
-                dataGridView3.Rows[rowIdx].Cells[1].Value = $"{x[i]:0.####}";
+                dataGridView3.Rows[0].Cells[i + 2].Value = $"{x[i]:0.####}";
+            }
 
-                for (int j = 0; j <= m; j++)
+            for (int j = 0; j <= m; j++)
+            {
+                int rowIdx = dataGridView3.Rows.Add();
+                dataGridView3.Rows[rowIdx].Cells[0].Value = $"y{j}";
+                dataGridView3.Rows[rowIdx].Cells[1].Value = $"{y[j]:0.####}";
+
+                for (int i = 0; i <= n; i++)
                 {
                     double error = Math.Abs(u[i][j] - v[i][j]);
-                    dataGridView3.Rows[rowIdx].Cells[j + 2].Value = error.ToString("0.####");
+                    dataGridView3.Rows[rowIdx].Cells[i + 2].Value = error.ToString("0.####");
                 }
             }
         }
@@ -452,7 +455,7 @@ namespace NumMeth_Lab2_var1_st3_MVR
             // 3D графики
             int n = Convert.ToInt32(textBox1.Text);
             int m = Convert.ToInt32(textBox2.Text);
-            Form4 form4 = new Form4(u, v, n, m, false);
+            Form4 form4 = new Form4(u, v, n, m);
             form4.Show();
         }
     }
