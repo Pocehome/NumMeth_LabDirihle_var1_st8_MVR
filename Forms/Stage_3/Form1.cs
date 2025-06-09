@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace NumMeth_Lab2_var1_st3_MVR
 {
@@ -20,6 +21,7 @@ namespace NumMeth_Lab2_var1_st3_MVR
         // Инициализация парамаетров
         int n, m, N_max, iter_count;
         double Eps, h, k, h2, k2, A, w_opt, MaxF, xMax, yMax, MaxDiff_UV, Eps_max, MaxR;
+        double evcR1;
 
         public Form1()
         {
@@ -173,20 +175,40 @@ namespace NumMeth_Lab2_var1_st3_MVR
             yMax = 0.0;
             MaxDiff_UV = 0.0;
 
+
+            double temp = 0.0;
+            evcR1 = 0.0;
+
             for (int j = 0; j <= m; j++)
             {
                 for (int i = 0; i <= n; i++)
                 {
                     if (domainMatrix[i][j] == 1)
-                    {   
+                    {
                         // Невязка
-                        double residual = Math.Abs(
-                            (2.0 / (h * h) + 2.0 / (k * k)) * v[i][j] -
-                            (v[i - 1][j] + v[i + 1][j]) / (h * h) -
-                            (v[i][j - 1] + v[i][j + 1]) / (k * k) -
-                            f[i][j]);
+                        //double residual = Math.Abs(
+                        //    (2.0 / (h * h) + 2.0 / (k * k)) * v[i][j] -
+                        //    (v[i - 1][j] + v[i + 1][j]) / (h * h) -
+                        //    (v[i][j - 1] + v[i][j + 1]) / (k * k) -
+                        //    f[i][j]);
+                        //if (residual > MaxR) MaxR = residual;
 
-                        if (residual > MaxR) MaxR = residual;
+                        //temp = (-1) * A * v[i][j] - h2 * (v[i - 1][j] + v[i + 1][j]) - k2 * (v[i][j - 1] + v[i][j + 1]) - f1(x[i], y[j]);
+                        temp = A * v[i][j] + h2 * (v[i - 1][j] + v[i + 1][j]) + k2 * (v[i][j - 1] + v[i][j + 1]) - f1(x[i], y[j]);
+                        evcR1 += temp * temp;
+                        if (Math.Abs(temp) >= MaxR) MaxR = Math.Abs(temp);
+
+                        //for (int j = 1; j < m; j++)
+                        //{
+                        //    for (int i = 1; i < n; i++)
+                        //    {
+                        //        //temp = A * v[i][j] + h2 * (v[i - 1][j] + v[i + 1][j]) + k2 * (v[i][j - 1] + v[i][j + 1]) - f1(x[i], y[j]);
+
+                        //        temp = (-1) * A * v[i][j] - h2 * (v[i - 1][j] + v[i + 1][j]) - k2 * (v[i][j - 1] + v[i][j + 1]) - f1(x[i], y[j]);
+                        //        evcR1 += temp * temp;
+                        //        if (Math.Abs(temp) >= MaxR) MaxR = Math.Abs(temp);
+                        //    }
+                        //}
 
                         // Разность U и V
                         double error = Math.Abs(u[i][j] - v[i][j]);
@@ -200,6 +222,8 @@ namespace NumMeth_Lab2_var1_st3_MVR
                     }
                 }
             }
+
+            evcR1 = Math.Sqrt(evcR1);
         }
 
         void fillReference()  // Заполнение справки
@@ -212,6 +236,8 @@ namespace NumMeth_Lab2_var1_st3_MVR
             textBox16.Text = Convert.ToString(MaxR);
             textBox12.Text = Convert.ToString(xMax);
             textBox13.Text = Convert.ToString(yMax);
+
+            textBox6.Text = Convert.ToString(evcR1);
 
             textBox14.Text = "Нулевое начальноe приближение";
         }
@@ -254,7 +280,7 @@ namespace NumMeth_Lab2_var1_st3_MVR
 
                 for (int i = 0; i <= n; i++)
                 {
-                    dataGridView1.Rows[rowIdx].Cells[i + 2].Value = u[i][j].ToString("0.####");
+                    dataGridView1.Rows[rowIdx].Cells[i + 2].Value = u[i][j].ToString("0.######");
                 }
             }
         }
@@ -292,7 +318,7 @@ namespace NumMeth_Lab2_var1_st3_MVR
 
                 for (int i = 0; i <= n; i++)
                 {
-                    dataGridView2.Rows[rowIdx].Cells[i + 2].Value = v[i][j].ToString("0.####");
+                    dataGridView2.Rows[rowIdx].Cells[i + 2].Value = v[i][j].ToString("0.######");
                 }
             }
         }
@@ -331,7 +357,7 @@ namespace NumMeth_Lab2_var1_st3_MVR
                 for (int i = 0; i <= n; i++)
                 {
                     double error = Math.Abs(u[i][j] - v[i][j]);
-                    dataGridView3.Rows[rowIdx].Cells[i + 2].Value = error.ToString("0.####");
+                    dataGridView3.Rows[rowIdx].Cells[i + 2].Value = error.ToString("0.######");
                 }
             }
         }

@@ -34,6 +34,7 @@
             this.пример05e6ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button3D = new System.Windows.Forms.Button();
             this.button_fill_table = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -44,6 +45,8 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
@@ -74,7 +77,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3D = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -149,6 +151,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Тестовая";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button3D
+            // 
+            this.button3D.Location = new System.Drawing.Point(158, 227);
+            this.button3D.Margin = new System.Windows.Forms.Padding(4);
+            this.button3D.Name = "button3D";
+            this.button3D.Size = new System.Drawing.Size(138, 28);
+            this.button3D.TabIndex = 11;
+            this.button3D.Text = "3D";
+            this.button3D.UseVisualStyleBackColor = true;
+            this.button3D.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button_fill_table
             // 
@@ -247,6 +260,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.textBox6);
             this.groupBox4.Controls.Add(this.textBox5);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.textBox16);
@@ -273,6 +288,25 @@
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Справка";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 181);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(398, 16);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Схема на сетке решена с невязкой (евклидова норма) R(p) =";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(443, 181);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(360, 22);
+            this.textBox6.TabIndex = 20;
             // 
             // textBox5
             // 
@@ -573,17 +607,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Размеры сетки";
             // 
-            // button3D
-            // 
-            this.button3D.Location = new System.Drawing.Point(158, 227);
-            this.button3D.Margin = new System.Windows.Forms.Padding(4);
-            this.button3D.Name = "button3D";
-            this.button3D.Size = new System.Drawing.Size(138, 28);
-            this.button3D.TabIndex = 11;
-            this.button3D.Text = "3D";
-            this.button3D.UseVisualStyleBackColor = true;
-            this.button3D.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -645,7 +668,6 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -664,6 +686,9 @@
         private System.Windows.Forms.Button button_fill_table;
         private System.Windows.Forms.ToolStripMenuItem пример05e6ToolStripMenuItem;
         private System.Windows.Forms.Button button3D;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label16;
     }
 }
 

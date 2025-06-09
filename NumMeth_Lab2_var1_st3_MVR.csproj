@@ -269,6 +269,7 @@
     <Content Include="Images\Stage_2_Sl\main.png" />
     <Content Include="Images\Stage_2_Sl\test.png" />
     <Content Include="Images\Stage_3\5e-7.jpg" />
+    <None Include="Images\Stage_3\5e-7_small_residual.jpg" />
     <Content Include="Images\Stage_3\test_opr.jpg" />
   </ItemGroup>
   <ItemGroup />
